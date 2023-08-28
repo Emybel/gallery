@@ -1,0 +1,102 @@
+body{
+    width: 100%;
+    height: 100%;
+    background: #283048;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top left, #F2EFE9, #DEB389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #DEB389, #F2EFE9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    color: #403022;;
+    flex-direction: column;
+}
+
+.content{
+    width: 100%;
+    height:700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1{
+    
+    font-size: 5rem;
+    text-align: center;
+    align-items: center;
+    
+}
+p{
+    width: 80%;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Sacramento', cursive;;
+    
+}
+button{
+    width: 25%;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 12px;
+    border: #403022;
+    font-size: 1.8rem;
+    color:#403022;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    cursor: pointer;
+    
+}
+button:hover{
+    background: #403022e1;
+    color: #f4ddc8;
+
+}
+.style{
+    font-family: 'Kaushan Script', cursive;
+}
+
+span{
+    color: #e17406;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+small{
+    align-self: center;
+    text-align: center;
+}
+.img-grid{
+    --gap: 16px;
+    --num-cols: 4;
+    --row-height: 600px;
+    box-sizing: border-box;
+    /* padding: var(--gap); */
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+    margin-bottom: 15%;
+    margin-top: 15%;
+}
+
+.img-grid > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-grid-col-2{
+    grid-column: span 2;
+}
+
+.img-grid-row-2{
+    grid-row: span 2;
+}
+
+
+/* anything under 1024px */
+@media screen and (max-width: 1024px){
+    .img-grid{
+        --num-cols: 2;
+        --row-height: 200px;
+    }
+}
